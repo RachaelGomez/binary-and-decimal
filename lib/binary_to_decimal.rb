@@ -5,5 +5,17 @@
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
 def binary_to_decimal(binary_array)
-  raise NotImplementedError
+    total = 0
+    binary_array.each do |num|
+      total = 2 * total + num
+    end
+    return total
+
+
 end
+  # raise NotImplementedError
+
+binary_numbers = Array.new(8) {rand (0..1)}
+
+print binary_to_decimal(binary_numbers)
+
